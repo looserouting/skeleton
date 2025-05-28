@@ -1,0 +1,18 @@
+{
+  "name": "looserouting/jwt-auth",
+  "description": "jwt-auth library with Access-Token, Refresh-Token and Token-Revocation",
+  "type": "module",
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "firebase/php-jwt": "^6.0",
+    "vlucas/phpdotenv": "^5.6",
+  },
+  "autoload": {
+    "psr-4": {
+      "JwtAuth\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
