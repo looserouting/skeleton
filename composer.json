@@ -6,13 +6,18 @@
   "require": {
     "php": "^8.1",
     "firebase/php-jwt": "^6.0",
-    "vlucas/phpdotenv": "^5.6",
+    "vlucas/phpdotenv": "^5.6"
   },
   "autoload": {
     "psr-4": {
       "JwtAuth\\": "src/"
     }
   },
+  "authors": [
+  {
+    "name": "Paolo Compagnini",
+    "email": "paolo.compagnini@gmail.com"
+  }],
   "minimum-stability": "stable",
   "prefer-stable": true
 }
