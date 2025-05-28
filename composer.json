@@ -1,7 +1,7 @@
 {
   "name": "looserouting/jwt-auth",
   "description": "jwt-auth library with Access-Token, Refresh-Token and Token-Revocation",
-  "type": "module",
+  "type": "library",
   "license": "MIT",
   "require": {
     "php": "^8.1",
