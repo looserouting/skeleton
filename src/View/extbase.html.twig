@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block header %}
+<header class="d-flex flex-wrap justify-content-between mb-4 border-bottom">
+  <a class="d-flex align-items-center" href="/"><img src="/images/logo_klein.png" alt="logo"></a>
+  <form class="d-flex align-items-center" action="/logout" method="post">
+    <button class="btn btn-primary" type="submit">Logout</button>
+  </form>
+</header>
+{% endblock %}
+
+{% block navigation %}
+<navigation class="col-md-3" style="width: 280px;">
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="/" class="nav-link active" aria-current="page">
+          <i class="bi-table pe-none me-2" width="16" height="16"></i>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/numbers" class="nav-link link-body-emphasis">
+          <i class="bi-123 pe-none me-2" width="16" height="16"></i>
+          Phone numbers
+        </a>
+      </li>
+      <li>
+        <a href="/phoneusers" class="nav-link link-body-emphasis">
+          <i class="bi-person pe-none me-2" width="16" height="16"></i>
+         Users 
+        </a>
+      </li>
+      <li>
+        <a href="/devices" class="nav-link link-body-emphasis">
+          <i class="bi-telephone pe-none me-2" width="16" height="16"></i>
+          Devices
+        </a>
+      </li>
+      <li>
+        <a href="/groups" class="nav-link link-body-emphasis">
+          <i class="bi-people pe-none me-2" width="16" height="16"></i>
+          Groups
+        </a>
+      </li>
+      <li>
+        <a href="/fax" class="nav-link link-body-emphasis">
+          <i class="bi-body-text pe-none me-2" width="16" height="16"></i>
+          Fax
+        </a>
+      </li>
+      <li>
+        <a href="/webusers" class="nav-link link-body-emphasis">
+          <i class="bi-person-lock pe-none me-2" width="16" height="16"></i>
+         Access 
+        </a>
+      </li>
+    </ul>
+</navigation>
+{% endblock %}

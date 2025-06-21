@@ -1,0 +1,57 @@
+{% extends 'extbase.html.twig' %}
+
+{% block head %}
+{{ parent() }}
+<link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+{% endblock %}
+
+{% block main %}
+<h1>User Übersicht</h1>
+<div class="actions"><a href="users/add" class="me-2">+Add User</a><a>Delete</a></div>
+
+
+<table id="userTable" class="display">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>E-Mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- User-Daten werden hier dynamisch eingefügt -->
+    </tbody>
+</table>
+
+
+{% endblock %}
+
+{% block javascript %}
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $('#userTable').DataTable({
+            "processing": true,
+            "serverSide": true,
+            "ajax": {
+                url: 'api/users',
+                type: 'POST'
+            },
+            "columns": [
+                { "data": "id" },
+                { "data": "mail" }
+            ],
+            "layout": {
+                "top1": "searchPanes"
+            },
+            "columnDefs": [{
+                "searchPanes": {
+                "show": true,
+                },
+                "targets": '_all',
+            }],
+            "dom": 'Plrtip' // Fügt die Filterelemente hinzu
+        });
+    });
+</script>
+{% endblock %}

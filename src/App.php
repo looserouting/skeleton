@@ -27,7 +27,7 @@ class App
 
     private function initializeDispatcher()
     {
-        $this->dispatcher = \FastRoute\simpleDispatcher(require __DIR__ . '../config/routes.php');
+        $this->dispatcher = \FastRoute\simpleDispatcher(require __DIR__ . '/../config/routes.php');
     }
 
     public function run()

@@ -1,0 +1,25 @@
+{% extends 'extbase.html.twig' %}
+
+{% block main %}
+    <h1>New User</h1>
+    <form action="users/add" method="post">
+        <label for="descrption">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <br><br>
+        
+        <label for="model>Model:</label>
+        <select id="model" name="model">
+          <optgroup label="Snom">
+	    <option>D716</option>
+	    <option>D730</option>
+          </optgroup>
+          <optgroup label="Yealink">
+	    <option>T46U</option>
+	    <option>T48U</option>
+	  </optgroup>
+       <button>Add</button>
+        <br><br>
+        
+        <input type="submit" value="Create">
+    </form>
+{% endblock %}

@@ -1,7 +1,4 @@
 skeleton
 --------
-add routing
-add php-di 
-add App-Class
-add public/index.php
-add LoginCntroller and WebUserController and example twig views
+use my jwt lib and use Token based authorization
+use my orm lib / migrate WebUser Entity to use my orm lib

@@ -8,8 +8,6 @@ ini_set('display_errors', 'On');
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-session_start();
-
 // Initialize and run the application
 $app = new App();
 $app->run();
