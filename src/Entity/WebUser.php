@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dive\Model;
+namespace App\Entity;
 
 class WebUser
 {
@@ -11,7 +11,7 @@ class WebUser
     public string $mail;
     public string $password;
 
-    function __construct( int $id=0, string $username = '', string $mail = '', string $password = '') {
+    function __construct(string $username = '', string $mail = '', string $password = '', int $id = 0) {
         $this->id = $id;
         $this->mail = $mail;
         $this->username = $username;
@@ -21,10 +21,10 @@ class WebUser
     public static function fromArray(array $data): WebUser
     {
         return new WebUser(
-            $data['id'],
             $data['username'],
             $data['mail'],
-            $data['password']
+            $data['password'],
+            $data['id'] ?? 0
         );
     }
 

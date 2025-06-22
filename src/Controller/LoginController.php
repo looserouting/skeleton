@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dive\Controller;
+namespace App\Controller;
 
-use Dive\Model\SessionUser;
+use App\Entity\SessionUser;
 use DI\Attribute\Inject;
 
 class LoginController extends AbstractController

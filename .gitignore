@@ -1,0 +1,8 @@
+# Composer dependencies
+/vendor/
+
+# Environment variables file
+# Use .env.example as a template for your environment-specific settings
+.env
+
+composer.lock
