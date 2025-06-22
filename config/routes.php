@@ -18,6 +18,7 @@ return function (RouteCollector $r) {
     });
     
     $r->addGroup('/api', function (RouteCollector $r) {
-	$r->addRoute(['GET','POST'], '/webusers', ['App\Controller\WebUsersController','fetch']);
+	    $r->addRoute(['GET'], '/webusers', ['App\Controller\WebUsersController','fetch']);
+        $r->addRoute(['GET'], '/auth', ['App\Controller\AuthAPIController','fetch']);
     });
 };
