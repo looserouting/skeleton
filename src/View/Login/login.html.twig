@@ -8,7 +8,7 @@
 <header class="text-center mb-4">
   <img class="mx-auto mt-5 d-block" src="images/logo_128x128.png" alt="Dive Logo">
 </header>
-<form class="container" method="post" style="width: 22rem">
+<form id="loginForm" class="container" method="post" style="width: 22rem">
     <div class="row">
         <div class="col">
             <h1>Login</h1>
@@ -33,4 +33,24 @@
         </div>
     </div>
 </form>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const res = await fetch('/api/login', {
+        method: 'POST',
+        credentials: 'include', // 🔑 wichtig: Cookie senden/empfangen
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          username: document.getElementById('inputEmail').value,
+          password: document.getElementById('inputPassword').value
+        })
+      });
+
+      const json = await res.json();
+      document.getElementById('message').innerText = json.message || json.error || '';
+    });
+  </script>
+
 {% endblock %}
